@@ -7,11 +7,11 @@ router.get("/", function(req,res){
 })
 
 router.get("/quiz", function(req,res){
-    res.send("퀴즈 카테고리")
+    res.render('quiz')
 })
 
 router.get("/behavior", function(req,res){
-    res.send("행동 카테고리")
+    res.render('behavior')
 })
 
 module.exports = router
