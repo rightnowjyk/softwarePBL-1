@@ -14,7 +14,10 @@
 <body>
     <div class="wrap">
         <div class="title">
-            <% var quiz = data[0] %>
+            <% for(let i =0; i<data.length;i++){%>
+                <% var quiz = data[i] %>
+            <%}%>
+            <% var quiz = data[0] %> 
             <%= quiz.type %>
         </div>
         <a href="/"><img src="/public/home.png" alt="홈으로" class="homeb"></a>
@@ -29,6 +32,8 @@
 
 
           <p>
+            <% var random = Math.floor(Math.random() * 2) %>
+            <% var quiz = data[random] %> 
             <%= quiz.question %>
           </p>
     
