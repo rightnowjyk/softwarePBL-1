@@ -32,7 +32,7 @@
 
 
           <p>
-            <% var random = Math.floor(Math.random() * 2) %>
+            <% var random = Math.floor(Math.random() * data.length) %>
             <% var quiz = data[random] %> 
             <%= quiz.question %>
           </p>
@@ -41,6 +41,7 @@
        
         <div class="container">
             <div class="group">
+                
                 <% if(quiz.type == "OX"){%>
                     <a href="/quiz/ox/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
                 <%}%>
