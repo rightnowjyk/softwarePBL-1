@@ -1,0 +1,116 @@
+* {
+    font-family: 'Jua', sans-serif;
+}
+
+.top {
+    width: 100vw;
+    height: 200px;
+    background-color: #40BBCA;
+    position: absolute;
+    top : -20px;
+    right: 0px;
+}
+.title {
+    font-size: 100px;
+    padding-bottom: 300px;
+    position: relative;
+    text-align: center;
+    top: -40px;
+    
+}
+
+
+.line {
+    width: 100%;
+    position:absolute;
+    top: 170px;
+    right: 0;
+}
+
+.oneofactionbtn {
+    width: 300px;
+    height: 180px;
+    background-color: #F6B157;
+    text-align: center;
+    position:relative; 
+    border-radius: 200px;
+    font-size: 70px;
+    top: 15rem;
+    right: -25rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bodybtn {
+    width: 300px;
+    height: 180px;
+    background-color: #F6B157;
+    text-align: center;
+    position:relative; 
+    border-radius: 200px;
+    font-size: 50px;
+    top: 4rem;
+    right: -49rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nonstopspeakbtn {
+    width: 300px;
+    height: 180px;
+    background-color: #F6B157;
+    text-align: center;
+    position:relative; 
+    border-radius: 200px;
+    font-size: 50px;
+    top: 6rem;
+    right: -25rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nonstopwritebtn{
+    width: 300px;
+    height: 180px;
+    background-color: #F6B157;
+    text-align: center;
+    position:relative; 
+    border-radius: 200px;
+    top: -4.5rem;
+    right: -49rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 50px;
+}
+
+.title1 {
+    position: relative;
+    right: -2.5rem;
+    top: -1rem;
+}
+.title2 {
+    position: relative;
+    right: -6rem;
+    top: -1.5rem;
+}
+
+.title3 {
+    position: relative;
+    right: -5.5rem;
+    top: -1rem;
+}
+
+.title4 {
+    position: relative;
+    right: -6rem;
+    top: -1rem;
+}
+
+
+.home {
+    width: 110px;
+    position: absolute;
+    left: 11px;
+    top:20px;
+}

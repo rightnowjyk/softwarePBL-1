@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreation Game</title>
+    <link rel="stylesheet" href="/public/question.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="title">
+            <% var quiz = data[0] %>
+            <%= quiz.type %>
+        </div>
+        <a href="/"><img src="/public/home.png" alt="홈으로" class="homeb"></a>
+       
+        <br><br>
+
+        <div class="timer">
+            <img src="/public/alarm.png" alt="타이머" class="alarm">
+            <div class="time"></div>
+        </div>
+        <br>
+
+
+          <p>
+            <%= quiz.question %>
+          </p>
+    
+       <br>
+       
+        <div class="container">
+            <div class="group">
+                <% if(quiz.type == "OX"){%>
+                    <a href="/quiz/ox/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                <%}%>
+        
+                <% if(quiz.type == "넌센스"){%>
+                    <a href="/quiz/nonsense/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                <%}%>
+        
+                <% if(quiz.type == "네글자"){%>
+                    <a href="/quiz/fourWord/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                <%}%>
+        
+                <% if(quiz.type == "상식"){%>
+                    <a href="/quiz/knowledge/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                <%}%>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

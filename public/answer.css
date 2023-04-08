@@ -1,0 +1,55 @@
+* {
+    font-family: 'Jua', sans-serif;
+}
+body {
+    margin: 0;
+}
+.title {
+    background-color: #40BBCA;
+    font-size: 120px;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    border-style: solid;
+    border-color: white white black;
+    border-width: 0px 0px 10px 0px ;
+}
+.homeb {
+   
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top:50px;
+    left: 50px;
+}
+.circle {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:auto;
+    height: 350px;
+    width: 350px;
+    text-align: center;
+    line-height: 350px;
+    font-size: 70px;
+
+    border: 20px;
+    border-radius: 50%;
+    border-color: #F6B157;
+    border-style: solid;
+    
+}
+
+p {
+    height: auto;
+    text-align: center;
+    font-size: 40px;
+}
+
+.right {
+    float: right;
+    width: 100px;
+    height: 100px;
+    
+}

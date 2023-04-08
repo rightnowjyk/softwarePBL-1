@@ -1,0 +1,59 @@
+* {
+    font-family: 'Jua', sans-serif;
+}
+.title {
+    background-color: #40BBCA;
+    font-size: 150px;
+    text-align: center;
+    height: 200px;
+    border-style: solid;
+    border-color: white white black;
+    border-width: 0px 0px 10px 0px ;
+}
+.homeb {
+   
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    top:50px;
+    left: 50px;
+}
+
+p {
+    height: auto;
+    text-align: center;
+    font-size: 70px;
+}
+
+
+.shortline {
+    width: 700px;
+   
+}
+.container .group {
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1600px;
+    margin: auto;
+    padding: 10px;
+}
+
+.container .group .category {
+    background-color:#F6B157;
+    margin: 40px 30px;
+    width: 350px;
+    height: 150px;
+    font-size: 45px;
+    
+    border-color: white;
+    border-radius: 30px;
+    
+    transition: .5s;
+  
+    
+}
+.container .group .category:hover {
+    background-color: hsl(27, 100%, 50%);
+}

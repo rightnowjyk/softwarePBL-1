@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreation Game</title>
+    <link rel="stylesheet" href="/public/answer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="title">퀴즈 연습문제 정답</div>
+        <a href="/"><img src="/public/home.png" alt="홈으로" class="homeb"></a>
+       
+        <br><br>
+        
+        <div class="circle">
+            <% var quiz = data[0] %>
+            <%= quiz.answer %>
+        </div>
+    
+       <br>
+
+        <!-- <p>'번번이'가 맞습니다<br>한 단어를 반복적으로 결합한 말 뒤에는 접사'-이'를 붙입니다.</p> -->
+        <% if(quiz.num == 1){%>
+            <a href="/quiz/ox"><img src="/public/right.png" alt="다음으로" class="right"></a>
+        <%}%>
+
+        <% if(quiz.num == 2){%>
+            <a href="/quiz/nonsense"><img src="/public/right.png" alt="다음으로" class="right"></a>
+        <%}%>
+
+        <% if(quiz.num == 3){%>
+            <a href="/quiz/fourWord"><img src="/public/right.png" alt="다음으로" class="right"></a>
+        <%}%>
+
+        <% if(quiz.num == 4){%>
+            <a href="/quiz/fourWord"><img src="/public/right.png" alt="다음으로" class="right"></a>
+        <%}%>
+        
+    </div>
+</body>
+</html>
+
