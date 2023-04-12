@@ -32,14 +32,15 @@
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position:relative; 
+    position:absolute; 
     border-radius: 200px;
     font-size: 70px;
-    top: 15rem;
-    right: -25rem;
-
+    top: 40%;
+    right: 50%;
+    margin-right: 3rem;
     display: flex;
     flex-wrap: wrap;
+    transition: .5s;
 }
 
 .bodybtn {
@@ -47,14 +48,16 @@
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position:relative; 
+    position:absolute; 
+    margin-left: 3rem;
     border-radius: 200px;
     font-size: 50px;
-    top: 4rem;
-    right: -49rem;
+    top: 40%;
+    right: 30%;
 
     display: flex;
     flex-wrap: wrap;
+    transition: .5s;
 }
 
 .nonstopspeakbtn {
@@ -62,26 +65,31 @@
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position:relative; 
+    position:absolute; 
     border-radius: 200px;
     font-size: 50px;
-    top: 6rem;
-    right: -25rem;
+    top: 68%;
+    right: 50%;
+    margin-right: 3rem;
+    font-size: 50px;
     display: flex;
     flex-wrap: wrap;
+    transition: .5s;
 }
 .nonstopwritebtn{
     width: 300px;
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position:relative; 
+    position:absolute; 
     border-radius: 200px;
-    top: -4.5rem;
-    right: -49rem;
+    top: 68%;
+    right: 30%;
+    margin-left: 3rem;
     display: flex;
     flex-wrap: wrap;
     font-size: 50px;
+    transition: .5s;
 }
 
 .title1 {
@@ -113,4 +121,24 @@
     position: absolute;
     left: 11px;
     top:20px;
+}
+
+.oneofactionbtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+.bodybtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+
+.nonstopspeakbtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+
+.nonstopwritebtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+
+a:link, a:visited {
+    text-decoration: none;  /* 밑줄없애기 */
+    color: black;
 }

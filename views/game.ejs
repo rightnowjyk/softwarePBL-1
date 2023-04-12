@@ -35,6 +35,10 @@
             <% var random = Math.floor(Math.random() * data.length) %>
             <% var quiz = data[random] %> 
             <%= quiz.question %>
+            <!-- <% var count = 0;%>
+            <% function button_onclick(){%>
+                <%count++;%>
+            <%}%> -->
           </p>
     
        <br>
@@ -42,20 +46,31 @@
         <div class="container">
             <div class="group">
                 
+                <!-- <% if(quiz.type == "OX"){%>
+                    <a href="/quiz/ox"><img src="/public/right.png" alt="다음으로" class="right" onclick=button_onclick()></a>
+                        <% if(count == 10){%>
+                            <a href="/quiz/ox/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                        <%}%>
+                    <%}%> -->
+
                 <% if(quiz.type == "OX"){%>
-                    <a href="/quiz/ox/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                    <a href="/quiz/ox/end"><button class="category">정답</button></div></a>
+                        <!-- <a href="/quiz/ox/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
                 <%}%>
         
                 <% if(quiz.type == "넌센스"){%>
-                    <a href="/quiz/nonsense/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                    <a href="/quiz/nonsense/end"><button class="category">정답</button></div></a>
+                    <!-- <a href="/quiz/nonsense/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
                 <%}%>
         
                 <% if(quiz.type == "네글자"){%>
-                    <a href="/quiz/fourWord/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                    <a href="/quiz/fourWord/end"><button class="category">정답</button></div></a>
+                    <!-- <a href="/quiz/fourWord/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
                 <%}%>
         
                 <% if(quiz.type == "상식"){%>
-                    <a href="/quiz/knowledge/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
+                    <a href="/quiz/knowledge/end"><button class="category">정답</button></div></a>
+                    <!-- <a href="/quiz/knowledge/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
                 <%}%>
             </div>
         </div>

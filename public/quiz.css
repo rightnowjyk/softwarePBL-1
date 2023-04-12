@@ -18,6 +18,12 @@
     text-align: center;
     top: -40px;
 }
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
 
 
 .line {
@@ -32,13 +38,14 @@
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 35%;
+    left: 15%;
     border-radius: 200px;
     font-size: 50px;
-    top: 15rem;
-    right: -15rem;
     display: flex;
     flex-wrap: wrap;
+    transition: .5s;
 }
 
 .commonsensebtn {
@@ -46,13 +53,15 @@
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 35%;
+    left: 40%;
     border-radius: 200px;
     font-size: 70px;
-    top: 4rem;
     right: -38rem;
     display: flex;
     flex-wrap: wrap;
+    transition: .5s;
 }
 
 .oxbtn {
@@ -60,54 +69,45 @@
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 35%;
+    left: 65%;
     border-radius: 200px;
-    top: -7rem;
-    right: -61rem;
     font-size: 70px;
     display: flex;
     flex-wrap: wrap;
+    transition: .5s;
 }
 .nonesensebtn {
     width: 300px;
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 65%;
+    left: 27%;
     border-radius: 200px;
     font-size: 70px;
-    top: -4rem;
-    right: -15rem;
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    transition: .5s;
 }
 .flagbtn {
     width: 300px;
     height: 180px;
     background-color: #F6B157;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 65%;
+    left: 53%;
     border-radius: 200px;
     font-size: 70px;
-    top:-15rem;
-    right: -38rem;
     display: flex;
     flex-wrap: wrap;
+    transition: .5s;
 }
 
-.snackbtn {
-    width: 300px;
-    height: 180px;
-    background-color: #F6B157;
-    text-align: center;
-    position: relative;
-    border-radius: 200px;
-    font-size: 70px;
-    top: -26.5rem;
-    right: -61rem;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .title1 {
     position: relative;
@@ -136,4 +136,31 @@
     position: absolute;
     left: 11px;
     top:20px
+}
+
+a:link, a:visited {
+    text-decoration: none;  /* 밑줄없애기 */
+    color: black;
+}
+.fourquizbtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+.commonsensebtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+
+.oxbtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+
+.nonesensebtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+
+.flagbtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+a {
+    position: relative;
+    z-index: 1;
 }

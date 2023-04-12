@@ -21,31 +21,41 @@
     top: 320px;
     right: 0;
 }
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
 
 
 .actionbtn{
     width: 450px;
     height: 220px;
     background-color: #F6B157;
-    position:relative;
+    position:absolute;
+    top: 50%;
+    margin-left: 32rem;
     border-radius: 200px;
-    top: 10rem;
-    right: -50rem;
     font-size: 100px;
-    display: flex;
-    flex-wrap: wrap;
+    transition: .5s;
 }
 .quizbtn{
     width: 450px;
     height: 220px;
+    top: 50%;
     background-color: #F6B157;
-    position: relative;
+    position: absolute;
+    margin-right: 32rem;
     border-radius: 200px;
-    top: 23.5rem;
-    right: -15rem;
     font-size: 100px;
-    display: flex;
-    flex-wrap: wrap;
+    transition: .5s;
+}
+.actionbtn:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+.quizbtn:hover {
+    background-color: hsl(27, 100%, 50%);
 }
 .quizletter {
     position: relative;
@@ -68,4 +78,11 @@ a:link, a:visited {
     position: absolute;
     right: 10px;
     top: 30px;
+}
+
+.question {
+    width: 90px;
+    position: absolute;
+    bottom: 2px;
+    right: -1px;
 }
