@@ -28,7 +28,9 @@
         <br><br>
         <div class="container">
             <div class="group">
-                <div><button class="category">더 풀기</button></div>
+                <% if(quiz.name == "OX"){%>
+                    <a href="/quiz/ox"><div><button class="category">더 풀기</button></div></a>
+                <%}%>
                 <div><a href="/"><button class="category">끝내기</button></div></a>
             </div>
         </div>

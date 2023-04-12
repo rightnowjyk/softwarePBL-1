@@ -71,20 +71,29 @@ router.get("/quiz/knowledge/practice/answer", function(req,res){ //상식 연습
     })
 })
 
+var num = 0;
 router.get("/quiz/ox", function(req,res){ //OX 게임(본 게임)
-    var sql = "select * from ox";
-    db.query(sql, function(err, result){
-        res.render('game',{data:result})
-    })
-    
+    num += 1;
+    if(num<11){
+        var sql = "select * from ox";
+        db.query(sql, function(err, result){
+            res.render('game',{data:result})
+        }) 
+    } else{
+        num = 0;
+        var sql = "select * from exquiz where num = 1";
+        db.query(sql, function(err, result){
+            res.render('gameEnd',{data:result})
+        })
+    }  
 })
 
-router.get("/quiz/ox/end", function(req,res){ //OX 게임 끝(본 게임)
-    var sql = "select * from exquiz where num = 1";
-    db.query(sql, function(err, result){
-        res.render('gameEnd',{data:result})
-    })
-})
+// router.get("/quiz/ox/end", function(req,res){ //OX 게임 끝(본 게임)
+//     var sql = "select * from exquiz where num = 1";
+//     db.query(sql, function(err, result){
+//         res.render('gameEnd',{data:result})
+//     })
+// })
 
 
 module.exports = router
