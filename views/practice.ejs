@@ -24,7 +24,13 @@
         </div>
         <br><p>
             <% var quiz = data[0] %>
-            <%= quiz.quiz %>
+
+            <% if(quiz.num == 5){%>
+                <img src='<%= quiz.quiz %>' width="700" height="450">
+            <%} else{ %>
+                <%= quiz.quiz %>
+            <%}%>
+
         </p>    
        <br>
        
@@ -45,6 +51,11 @@
                 <% if(quiz.num == 4){%>
                     <a href="/quiz/knowledge/practice/answer"><button class="category">정답</button></div></a>
                 <%}%>
+
+                <% if(quiz.num == 5){%>
+                    <a href="/quiz/flag/practice/answer"><button class="category">정답</button></div></a>
+                <%}%>
+                
             </div>
         </div>
     </div>

@@ -28,30 +28,23 @@
             <img src="/public/alarm.png" alt="타이머" class="alarm">
             <div class="time"></div>
         </div>
+        <br><p>
+
+        <% var random = Math.floor(Math.random() * data.length) %>
+        <% var quiz = data[random] %> 
+
+        <% if(quiz.type == '국기 맞히기'){%>
+            <img src='<%= quiz.question %>' width="700" height="450">
+        <%} else{ %>      
+                <%= quiz.question %>
+        <%}%>
+
+        </p>
         <br>
-
-
-          <p>
-            <% var random = Math.floor(Math.random() * data.length) %>
-            <% var quiz = data[random] %> 
-            <%= quiz.question %>
-            <!-- <% var count = 0;%>
-            <% function button_onclick(){%>
-                <%count++;%>
-            <%}%> -->
-          </p>
-    
-       <br>
        
         <div class="container">
             <div class="group">
-                
-                <!-- <% if(quiz.type == "OX"){%>
-                    <a href="/quiz/ox"><img src="/public/right.png" alt="다음으로" class="right" onclick=button_onclick()></a>
-                        <% if(count == 10){%>
-                            <a href="/quiz/ox/end"><img src="/public/right.png" alt="다음으로" class="right"></a>
-                        <%}%>
-                    <%}%> -->
+            
 
                 <% if(quiz.type == "OX"){%>
                     <a href="/quiz/ox"><button class="category">정답</button></div></a>
@@ -70,6 +63,11 @@
         
                 <% if(quiz.type == "상식"){%>
                     <a href="/quiz/knowledge/end"><button class="category">정답</button></div></a>
+                    <!-- <a href="/quiz/knowledge/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
+                <%}%>
+
+                <% if(quiz.type == "국기 맞히기"){%>
+                    <a href="/quiz/flag/<%= quiz.num %>"><button class="category">정답</button></div></a>
                     <!-- <a href="/quiz/knowledge/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
                 <%}%>
             </div>

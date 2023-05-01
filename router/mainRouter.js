@@ -1,6 +1,10 @@
 const express = require('express')
 const router = express.Router();
+const bodyParser = require('body-parser');
 const db = require('../model/db');
+
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({extended:false}));
 
 router.get("/", function(req,res){ //메인화면
     res.render('main')
@@ -43,6 +47,13 @@ router.get("/quiz/knowledge/practice", function(req,res){ //상식 연습문제
     })
 })
 
+router.get("/quiz/flag/practice", function(req,res){ //국기 연습문제
+    var sql = "select * from exquiz where num = 5";
+    db.query(sql, function(err, result){
+        res.render('practice',{data:result})
+    })
+})
+
 router.get("/quiz/ox/practice/answer", function(req,res){ //OX 연습문제 정답
     var sql = "select * from exquiz where num = 1";
     db.query(sql, function(err, result){
@@ -71,16 +82,24 @@ router.get("/quiz/knowledge/practice/answer", function(req,res){ //상식 연습
     })
 })
 
-var num = 0;
+router.get("/quiz/flag/practice/answer", function(req,res){ //국기맞히기 연습문제 정답
+    var sql = "select * from exquiz where num = 5";
+    db.query(sql, function(err, result){
+        res.render('practiceAnswer',{data:result})
+    })
+})
+
+
+var numOx = 0;
 router.get("/quiz/ox", function(req,res){ //OX 게임(본 게임)
-    num += 1;
-    if(num<11){
+    numOx += 1;
+    if(numOx<11){
         var sql = "select * from ox";
         db.query(sql, function(err, result){
             res.render('game',{data:result})
         }) 
     } else{
-        num = 0;
+        numOx = 0;
         var sql = "select * from exquiz where num = 1";
         db.query(sql, function(err, result){
             res.render('gameEnd',{data:result})
@@ -88,12 +107,27 @@ router.get("/quiz/ox", function(req,res){ //OX 게임(본 게임)
     }  
 })
 
-// router.get("/quiz/ox/end", function(req,res){ //OX 게임 끝(본 게임)
-//     var sql = "select * from exquiz where num = 1";
-//     db.query(sql, function(err, result){
-//         res.render('gameEnd',{data:result})
-//     })
-// })
+var numFlag = 0;
+router.get("/quiz/flag", function(req,res){ //국기맞히기 게임(본 게임)
+    numFlag += 1;
+    if(numFlag<11){
+        var sql = "select * from flag";
+        db.query(sql, function(err, result){
+            res.render('game',{data:result})
+        }) 
+    } else{
+        numFlag = 0;
+        var sql = "select * from exquiz where num = 5";
+        db.query(sql, function(err, result){
+            res.render('gameEnd',{data:result})
+        })
+    }  
+})
 
+router.get("/quiz/flag/:num", function(req,res){ //국기맞히기 정답(본 게임)
+    db.query('select * from flag where num = ?',[req.params.num], function(err, result){ 
+        res.render('gameAnswer',{data:result})
+    });
+})
 
 module.exports = router
