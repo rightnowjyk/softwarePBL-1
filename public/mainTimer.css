@@ -15,24 +15,31 @@ body {
     border-color: white white black;
     border-width: 0px 0px 10px 0px ;
 }
+.home {
+    width: 110px;
+    position: absolute;
+    left: 11px;
+    top:20px
+}
+.start {
+    background-color: #F6B157;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    
+}
 
 .alarm {
     position: relative;
-    left: 15rem;
     width: 20rem;
+    text-align: center;
+   
 }
-.time {
-    width: 50rem;
-    height: 5rem;
-    background-color:#FFD29D;
-    margin-top: 2rem;
-}
+
 .container {
-  
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1600px;
     margin: auto;
-    padding: 10px;
+    padding: 20px;
 }

@@ -10,6 +10,14 @@ router.get("/", function(req,res){ //메인화면
     res.render('main')
 })
 
+router.get("/mainTimerSetting", function(req,res){ //메인타이머 시작
+    res.render('mainTimerSetting')
+})
+
+router.get("/mainTimer", function(req,res){ //메인타이머 시작
+    res.render('mainTimer')
+})
+
 router.get("/quiz", function(req,res){ //퀴즈 카테고리
     res.render('quiz')
 })
