@@ -46,35 +46,30 @@
           </div>
         
         
-        
           <br><br>
 
           <div id="digit"></div>
 
           <div style="text-align:center"><button onclick="start()" class="start">타이머 시작</button></div>
          
+          <% var time = data %>
           <script>
-          var i = 500;
+          var i = '<%= time.time %>';
+          var k = 500/(i/100)
           function start() {
-            if (i == 500)
+            if (i == i)
             {
-                i = 400;
-                var digit = document.getElementById("digit"); 
-         
+                var digit = document.getElementById("digit");         
                 var elem = document.getElementById("myBar");
                 var width = 500;
                 var id = setInterval(frame,1000);
                 function frame() {
                     if (width <= 0) {
                         clearInterval(id);
-                        i=400;
-                        
-                       
+                        document.location.href='/timeout';    
                     }
                      else {
-                        
-         
-                        width-= 100;
+                        width-= k;
                         elem.style.width = width + "px";
                       }
                   }

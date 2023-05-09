@@ -45,30 +45,24 @@
         <div class="container">
             <div class="group">
             
-
                 <% if(quiz.type == "OX"){%>
-                    <a href="/quiz/ox"><button class="category">정답</button></div></a>
-                        <!-- <a href="/quiz/ox/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
+                    <a href="/quiz/ox/<%= quiz.num %>"><button class="category">정답</button></div></a>
                 <%}%>
         
                 <% if(quiz.type == "넌센스"){%>
-                    <a href="/quiz/nonsense/end"><button class="category">정답</button></div></a>
-                    <!-- <a href="/quiz/nonsense/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
+                    <a href="/quiz/nonsense/<%= quiz.num %>"><button class="category">정답</button></div></a>
                 <%}%>
         
                 <% if(quiz.type == "네글자"){%>
-                    <a href="/quiz/fourWord/end"><button class="category">정답</button></div></a>
-                    <!-- <a href="/quiz/fourWord/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
+                    <a href="/quiz/fourWord/<%= quiz.num %>"><button class="category">정답</button></div></a>
                 <%}%>
         
-                <% if(quiz.type == "상식"){%>
-                    <a href="/quiz/knowledge/end"><button class="category">정답</button></div></a>
-                    <!-- <a href="/quiz/knowledge/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
+                <% if(quiz.type == "상식퀴즈"){%>
+                    <a href="/quiz/knowledge/<%= quiz.num %>"><button class="category">정답</button></div></a>
                 <%}%>
 
                 <% if(quiz.type == "국기 맞히기"){%>
                     <a href="/quiz/flag/<%= quiz.num %>"><button class="category">정답</button></div></a>
-                    <!-- <a href="/quiz/knowledge/end"><img src="/public/right.png" alt="다음으로" class="right"></a> -->
                 <%}%>
             </div>
         </div>

@@ -14,6 +14,7 @@
     />
   </head>
   <body>
+
     <div class="wrap">
       <div class="title">타이머 설정</div>
 
@@ -24,16 +25,18 @@
 
       <br />
 
-      <div class="container">
-        <div class="alarm_setting">
-          <img class="alarm" src="/public/alarm.png" />
-          <input type="number" />
+      <form action="/mainTimer" method="post">
+        <div class="container">
+          <div class="alarm_setting">
+            <img class="alarm" src="/public/alarm.png" />
+            <input type="number" name="time">
+          </div>
         </div>
-      </div>
-
-      <div class="start">
-        <img class="start_button" src="/public/start-button.png" />
-      </div>
+  
+        <div class="start">
+        <button type="submit"><img class="start_button" src="/public/start-button.png" /></button>
+        </div>
+      </form>
     </div>
   </body>
 </html>

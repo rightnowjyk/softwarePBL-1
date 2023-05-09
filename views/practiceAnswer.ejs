@@ -27,19 +27,23 @@
 
         <!-- <p>'번번이'가 맞습니다<br>한 단어를 반복적으로 결합한 말 뒤에는 접사'-이'를 붙입니다.</p> -->
         <% if(quiz.num == 1){%>
+            <p><%= quiz.explain %></p>
             <a href="/quiz/ox"><img src="/public/right.png" alt="다음으로" class="right"></a>
         <%}%>
 
         <% if(quiz.num == 2){%>
+            <p><%= quiz.explain %></p>
             <a href="/quiz/nonsense"><img src="/public/right.png" alt="다음으로" class="right"></a>
         <%}%>
 
         <% if(quiz.num == 3){%>
+            <p><%= quiz.explain %></p>
             <a href="/quiz/fourWord"><img src="/public/right.png" alt="다음으로" class="right"></a>
         <%}%>
 
         <% if(quiz.num == 4){%>
-            <a href="/quiz/fourWord"><img src="/public/right.png" alt="다음으로" class="right"></a>
+            <p><%= quiz.explain %></p>
+            <a href="/quiz/knowledge"><img src="/public/right.png" alt="다음으로" class="right"></a>
         <%}%>
 
         <% if(quiz.num == 5){%>

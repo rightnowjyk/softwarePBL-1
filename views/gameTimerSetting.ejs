@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recreation Game</title>
-    <link rel="stylesheet" href="./quiz_timer_setting.css" />
+    <link rel="stylesheet" href="/public/mainTimerSetting.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +14,7 @@
     />
   </head>
   <body>
+
     <div class="wrap">
       <div class="title">타이머 설정</div>
 
@@ -23,17 +24,20 @@
       </p>
 
       <br />
+      <% var game = data %>
 
-      <div class="container">
-        <div class="alarm_setting">
-          <img class="alarm" src="./alarm.png" />
-          <input type="number" id="input" placeholder="00:00" />
+      <form action="/gametimer/<%=game.game%>" method="post">
+        <div class="container">
+          <div class="alarm_setting">
+            <img class="alarm" src="/public/alarm.png" />
+            <input type="number" name="time">
+          </div>
         </div>
-      </div>
-
-      <div class="start">
-        <img class="start_button" src="./start-button.png" />
-      </div>
+  
+        <div class="start">
+        <button type="submit"><img class="start_button" src="/public/start-button.png" /></button>
+        </div>
+      </form>
     </div>
   </body>
 </html>
