@@ -1,3 +1,84 @@
+<!-- <!DOCTYPE html>
+<div lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recreation Game</title>
+    <link rel="stylesheet" href="/public/mainTimer.css" />
+    <script src="./mainTimer.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #myProgress {
+        width:500px;
+        height:50px;
+        background-color:#F6B157;
+    }
+ 
+      #myBar {
+        width:500px;
+        height:50px;
+        background-color:hsl(27, 100%, 50%);
+    }
+    </style>
+  </head>
+  
+   
+      <div class="title">타이머</div>
+
+      <div class="home">
+        <a href="/"><img class='home' src="/public/home.png" alt="홈으로"></a>
+      </div>
+
+      <br><br><br> 
+
+      <div class="container">
+        <div class="alarm_setting">
+          <div style="text-align: center;"><img class="alarm" src="/public/alarm-clock.png" /><div class="number">1</div></div>
+          <br><br> <br>
+
+          <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+        
+        
+        
+          <br><br>
+
+          <div id="digit"></div>
+
+          <div style="text-align:center"><button onclick="start()" class="start">타이머 시작</button></div>
+         
+          <script>
+            // XMLHttpRequest 객체 생성
+            const xhr = new XMLHttpRequest();
+
+            // 비동기 GET 요청 보내기
+            xhr.open('GET', '파일 경로');
+            xhr.send();
+
+            // 요청이 완료되면 클래스 이름 가져오기
+            xhr.onload = function() {
+              const html = xhr.responseText;
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              const element = doc.querySelector('./time-input');
+              console.log(element);
+};
+
+
+          </script>
+        
+        </div>
+      </div>
+  </body>
+</html> -->
+
 <!DOCTYPE html>
 <div lang="ko">
   <head>

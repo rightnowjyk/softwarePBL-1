@@ -9,6 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        #myProgress {
+          width:300px;
+          height:50px;
+          background-color:#F6B157;
+      }
+   
+        #myBar {
+          width:300px;
+          height:50px;
+          background-color:hsl(27, 100%, 50%);
+      }
+      </style>
 
 </head>
 <body>
@@ -21,13 +34,18 @@
             <%= quiz.type %>
         </div>
         <a href="/"><img src="/public/home.png" alt="홈으로" class="homeb"></a>
-       
-        <br><br>
+        <br><br><br><br>
 
         <div class="timer">
             <img src="/public/alarm.png" alt="타이머" class="alarm">
-            <div class="time"></div>
+            <div id="myProgress">
+                <div id="myBar"></div>
+                <br>
+                <!-- <div style="text-align:right"><button onclick="start()" class="start">타이머 시작</button></div> -->
+              </div>
         </div>
+        <div id="digit"></div>
+
         <br><p>
 
         <% var random = Math.floor(Math.random() * data.length) %>
@@ -64,6 +82,33 @@
                 <% if(quiz.type == "국기 맞히기"){%>
                     <a href="/quiz/flag/<%= quiz.num %>"><button class="category">정답</button></div></a>
                 <%}%>
+
+
+                <% var getTime = data1[0] %>
+                <script>
+            
+                    var i = '<%= getTime.time %>';
+                    var k = 300/(i/100)
+                      window.onload=function() {
+                        if (i == i)
+                        {
+                            var digit = document.getElementById("digit");         
+                            var elem = document.getElementById("myBar");
+                            var width = 300;
+                            var id = setInterval(frame,1000);
+                            function frame() {
+                                if (width <= 0) {
+                                    clearInterval(id);   
+                                }
+                                 else {
+                                    width-= k;
+                                    elem.style.width = width + "px";
+                                  }
+                              }
+                          }
+                      }
+                    </script>
+        
             </div>
         </div>
     </div>

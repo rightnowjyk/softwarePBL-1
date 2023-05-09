@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recreation Game</title>
+    <script src="/public/main.js" defer></script>
     <link rel="stylesheet" href="/public/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,8 +36,15 @@
       </div>
     </div>
 
-    <div class="question_img">
-      <img class="question" , src="/public/question.png" />
+    <div class="question">
+      <img src="/public/question.png" id="image" />
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modal-text">Modal text</p>
+          <!-- 모달 팝업에 표시할 텍스트 요소 -->
+        </div>
+      </div>
     </div>
   </body>
 </html>

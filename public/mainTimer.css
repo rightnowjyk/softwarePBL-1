@@ -43,3 +43,9 @@ body {
     margin: auto;
     padding: 20px;
 }
+.number {
+    position: relative;
+    top: -14rem;
+    font-size: 7rem;
+    margin-bottom: -8rem;
+} 

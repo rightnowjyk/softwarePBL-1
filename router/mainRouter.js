@@ -63,6 +63,7 @@ router.get("/quiz/ox/practice", function(req,res){ //OX 연습문제
     var sql = "select * from exquiz where num = 1";
     db.query(sql, function(err, result){
         db.query("select * from gametimer where game = game", function(err,result1){
+            console.log(result1);
             res.render('practice',{data:result, data1:result1})
         })
     })
