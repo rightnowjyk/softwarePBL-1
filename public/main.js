@@ -2,7 +2,7 @@
 document.getElementById("image").addEventListener("click", function () {
     var modal = document.getElementById("modal");
     var modalText = document.getElementById("modal-text");
-    modalText.innerHTML = "This is modal text"; // 모달 팝업의 텍스트 설정
+    modalText.innerHTML = ""; // 모달 팝업의 텍스트 설정
     modal.style.display = "block"; // 모달 팝업 보이도록 설정
   });
   

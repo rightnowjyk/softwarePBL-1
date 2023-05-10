@@ -36,44 +36,47 @@
       </div>
 
       <br><br><br> 
-
+      <% var time = data %>
       <div class="container">
         <div class="alarm_setting">
-          <div style="text-align: center;"><img class="alarm" src="/public/alarm-clock.png" /><div class="number">1</div></div>
+          <div style="text-align: center;"><img class="alarm" src="/public/alarm-clock.png" /><div class="number" id = countdown>
+          <%= time.time / 100 %>
+          </div></div>
           <br><br> <br>
 
           <div id="myProgress">
             <div id="myBar"></div>
           </div>
-        
-
-            
-
 
 
           <br><br>
 
           <div id="digit"></div>
 
-          <div style="text-align:center"><button onclick="start()" class="start">타이머 시작</button></div>
-         
-          <% var time = data %>
+          <div style="text-align:center"><button id = "start" onclick="start()" class="start">타이머 시작</button></div>
+          
           <script>
           var i = '<%= time.time %>';
           var k = 500/(i/100)
+
           function start() {
             if (i == i)
             {
+                var count = document.getElementById("countdown");
+                var start = document.getElementById("start");
+                start.disabled = true;
+                var countdown = i/100;
                 var digit = document.getElementById("digit");         
                 var elem = document.getElementById("myBar");
                 var width = 500;
                 var id = setInterval(frame,1000);
                 function frame() {
-                    if (width <= 0) {
+                    if (width <= 1) {
                         clearInterval(id);
                         document.location.href='/timeout';    
                     }
                      else {
+                        count.innerHTML = --countdown;
                         width-= k;
                         elem.style.width = width + "px";
                       }

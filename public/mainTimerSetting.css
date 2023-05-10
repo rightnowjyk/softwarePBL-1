@@ -15,6 +15,12 @@ body {
     border-color: white white black;
     border-width: 0px 0px 10px 0px ;
 }
+.home {
+    width: 110px;
+    position: absolute;
+    left: 11px;
+    top:20px
+}
 
 p {
     height: auto;
@@ -38,7 +44,7 @@ p{
     margin-top: 2rem;
     font-size: 3rem;
 }
-.start{
+.start_button{
     position: absolute;
     bottom: 1rem;
     right: 1rem;
