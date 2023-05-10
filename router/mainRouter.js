@@ -63,7 +63,6 @@ router.get("/quiz/ox/practice", function(req,res){ //OX 연습문제
     var sql = "select * from exquiz where num = 1";
     db.query(sql, function(err, result){
         db.query("select * from gametimer where game = game", function(err,result1){
-            console.log(result1);
             res.render('practice',{data:result, data1:result1})
         })
     })
@@ -72,14 +71,18 @@ router.get("/quiz/ox/practice", function(req,res){ //OX 연습문제
 router.get("/quiz/nonsense/practice", function(req,res){ //넌센스 연습문제
     var sql = "select * from exquiz where num = 2";
     db.query(sql, function(err, result){
-        res.render('practice',{data:result})
+        db.query("select * from gametimer where game = game", function(err,result1){
+            res.render('practice',{data:result, data1:result1})
+        })
     })
 })
 
 router.get("/quiz/fourWord/practice", function(req,res){ //네글자 연습문제
     var sql = "select * from exquiz where num = 3";
     db.query(sql, function(err, result){
-        res.render('practice',{data:result})
+        db.query("select * from gametimer where game = game", function(err,result1){
+            res.render('practice',{data:result, data1:result1})
+        })
     })
 })
 
@@ -87,14 +90,18 @@ router.get("/quiz/fourWord/practice", function(req,res){ //네글자 연습문�
 router.get("/quiz/knowledge/practice", function(req,res){ //상식 연습문제
     var sql = "select * from exquiz where num = 4";
     db.query(sql, function(err, result){
-        res.render('practice',{data:result})
+        db.query("select * from gametimer where game = game", function(err,result1){
+            res.render('practice',{data:result, data1:result1})
+        })
     })
 })
 
 router.get("/quiz/flag/practice", function(req,res){ //국기 연습문제
     var sql = "select * from exquiz where num = 5";
     db.query(sql, function(err, result){
-        res.render('practice',{data:result})
+        db.query("select * from gametimer where game = game", function(err,result1){
+            res.render('practice',{data:result, data1:result1})
+        })
     })
 })
 
@@ -257,13 +264,17 @@ router.get("/quiz/flag", function(req,res){ //국기맞히기 게임(본 게임)
     if(numFlag<11){
         var sql = "select * from flag";
         db.query(sql, function(err, result){
-            res.render('game',{data:result})
+            db.query("select * from gametimer where game = game", function(err, result1){
+                res.render('game',{data:result, data1:result1})
+            })
         }) 
     } else{
         numFlag = 0;
         var sql = "select * from exquiz where num = 5";
         db.query(sql, function(err, result){
-            res.render('gameEnd',{data:result})
+            db.query("select * from gametimer where game = game", function(err, result1){
+                res.render('gameEnd',{data:result, data1:result1})
+            })
         })
     }  
 })
