@@ -83,3 +83,10 @@ p {
 .container .group .category:hover {
     background-color: hsl(27, 100%, 50%);
 }
+
+.right {
+    float: right;
+    width: 100px;
+    height: 100px;
+    
+}

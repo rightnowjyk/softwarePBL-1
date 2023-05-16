@@ -28,71 +28,85 @@
 }
 
 .oneofactionbtn {
-    width: 300px;
-    height: 180px;
+    width: 20rem;
+    height: 12rem;
     background-color: #F6B157;
     text-align: center;
-    position:absolute; 
     border-radius: 200px;
-    font-size: 70px;
-    top: 40%;
-    right: 50%;
-    margin-right: 3rem;
+    font-size: 4.5rem;
+    position: absolute; /* 위치 지정 */
+    top: 45%; /* 위쪽 여백 50% */
+    left: 35%; /* 왼쪽 여백 50% */
+    transform: translate(-35%, -45%); /* 중앙 정렬 */
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
     transition: .5s;
 }
 
 .bodybtn {
-    width: 300px;
-    height: 180px;
+    width: 20rem;
+    height: 12rem;
     background-color: #F6B157;
     text-align: center;
-    position:absolute; 
-    margin-left: 3rem;
+    position: absolute; /* 위치 지정 */
+    top: 45%; /* 위쪽 여백 50% */
+    left: 65%; /* 왼쪽 여백 50% */
+    transform: translate(-65%, -45%); /* 중앙 정렬 */
     border-radius: 200px;
-    font-size: 50px;
-    top: 40%;
-    right: 30%;
-
+    font-size: 4rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
     transition: .5s;
 }
 
 .nonstopspeakbtn {
-    width: 300px;
-    height: 180px;
+    width: 20rem;
+    height: 12rem;
     background-color: #F6B157;
     text-align: center;
-    position:absolute; 
+    position: absolute; /* 위치 지정 */
+    top: 50%; /* 위쪽 여백 50% */
+    left: 35%; /* 왼쪽 여백 50% */
+    transform: translate(-35%, -45%); /* 중앙 정렬 */
     border-radius: 200px;
     font-size: 50px;
-    top: 68%;
-    right: 50%;
-    margin-right: 3rem;
-    font-size: 50px;
+    margin-top: 12rem;
+    font-size: 4rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
     transition: .5s;
 }
 .nonstopwritebtn{
-    width: 300px;
-    height: 180px;
+    width: 20rem;
+    height: 12rem;
     background-color: #F6B157;
     text-align: center;
-    position:absolute; 
+    position: absolute; /* 위치 지정 */
+    top: 50%; /* 위쪽 여백 50% */
+    left: 65%; /* 왼쪽 여백 50% */
+    transform: translate(-65%, -45%); /* 중앙 정렬 */
     border-radius: 200px;
-    top: 68%;
-    right: 30%;
-    margin-left: 3rem;
+    margin-top: 12rem;
+
     display: flex;
     flex-wrap: wrap;
-    font-size: 50px;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    font-size: 4rem;
     transition: .5s;
 }
 
-.title1 {
+/* .title1 {
     position: relative;
     right: -2.5rem;
     top: -1rem;
@@ -114,7 +128,7 @@
     right: -6rem;
     top: -1rem;
 }
-
+ */
 
 .home {
     width: 110px;

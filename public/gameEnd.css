@@ -3,12 +3,16 @@
 }
 .title {
     background-color: #40BBCA;
-    font-size: 150px;
+    font-size: 120px;
     text-align: center;
     height: 200px;
+    line-height: 200px;
     border-style: solid;
     border-color: white white black;
     border-width: 0px 0px 10px 0px ;
+}
+body {
+    margin: 0;
 }
 .homeb {
    

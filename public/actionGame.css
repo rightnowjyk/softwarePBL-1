@@ -26,16 +26,17 @@
     right: 0;
 }
 
-.fourquizbtn {
+.btn1 {
     width: 22rem;
     height: 13rem;
     background-color: #F6B157;
     text-align: center;
     position: absolute;
-    top: 35%;
-    left: 15%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35rem, -50%);
     border-radius: 200px;
-    font-size: 3.7rem;
+    font-size: 4.4rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* 수평 가운데 정렬 */
@@ -44,14 +45,15 @@
     transition: .5s;
 }
 
-.commonsensebtn {
+.btn2 {
     width: 22rem;
     height: 13rem;
     background-color: #F6B157;
     text-align: center;
     position: absolute;
-    top: 35%;
-    left: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 200px;
     font-size: 4.4rem;
     right: -38rem;
@@ -63,14 +65,15 @@
     transition: .5s;
 }
 
-.oxbtn {
+.btn3 {
     width: 22rem;
     height: 13rem;
     background-color: #F6B157;
     text-align: center;
     position: absolute;
-    top: 35%;
-    left: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(13rem, -50%);
     border-radius: 200px;
     font-size: 4.4rem;
     display: flex;
@@ -80,15 +83,16 @@
     text-align: center; /* 텍스트 가운데 정렬 */
     transition: .5s;
 }
-.nonesensebtn {
+.btn4 {
     width: 22rem;
     height: 13rem;
     background-color: #F6B157;
     text-align: center;
     position: absolute;
-    margin-top: 1.5rem;
-    top: 65%;
-    left: 27%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35rem, -50%);
+    margin-top: 14rem;
     border-radius: 200px;
     font-size: 4.4rem;
     display: flex;
@@ -98,15 +102,16 @@
     text-align: center; /* 텍스트 가운데 정렬 */
     transition: .5s;
 }
-.flagbtn {
+.btn5 {
     width: 22rem;
     height: 13rem;
     background-color: #F6B157;
     text-align: center;
     position: absolute;
-    margin-top: 1.5rem;
-    top: 65%;
-    left: 53%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 14rem;
     border-radius: 200px;
     font-size: 4.4rem;
     display: flex;
@@ -116,6 +121,27 @@
     text-align: center; /* 텍스트 가운데 정렬 */
     transition: .5s;
 }
+
+.btn6 {
+    width: 22rem;
+    height: 13rem;
+    background-color: #F6B157;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(13rem, -50%);
+    margin-top: 14rem;
+    border-radius: 200px;
+    font-size: 4.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    transition: .5s;
+}
+
 
 
 .home {
