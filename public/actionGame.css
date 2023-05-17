@@ -155,24 +155,25 @@ a:link, a:visited {
     text-decoration: none;  /* 밑줄없애기 */
     color: black;
 }
-.fourquizbtn:hover {
+.btn1:hover {
     background-color: hsl(27, 100%, 50%);
 }
-.commonsensebtn:hover {
+.btn2:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+.btn3:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+.btn4:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+.btn5:hover {
+    background-color: hsl(27, 100%, 50%);
+}
+.btn6:hover {
     background-color: hsl(27, 100%, 50%);
 }
 
-.oxbtn:hover {
-    background-color: hsl(27, 100%, 50%);
-}
-
-.nonesensebtn:hover {
-    background-color: hsl(27, 100%, 50%);
-}
-
-.flagbtn:hover {
-    background-color: hsl(27, 100%, 50%);
-}
 a {
     position: relative;
     z-index: 1;

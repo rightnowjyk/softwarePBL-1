@@ -38,7 +38,6 @@ router.get("/gameTimerSetting/:game", function(req,res){ //게임타이머 설�
 router.post("/gameTimer/:game", function(req,res){ //게임타이머 시작
     var game = req.params.game
     var time = req.body.time
-    console.log(time)
     if(!time){
         res.send(`<script type="text/javascript">alert("타이머를 설정해주세요");
         document.location.href="/mainTimerSetting";</script>`);
